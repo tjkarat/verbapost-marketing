@@ -96,7 +96,7 @@
             color: #999;
             font-weight: 600;
             margin-top: 50px;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
         }
 
         .trust-container {
@@ -104,21 +104,33 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 35px;
+            gap: 40px; /* Increased gap for cleaner look */
             opacity: 0.8;
             margin-bottom: 40px;
         }
 
-        .trust-logo {
-            height: 28px;
+        /* SVG LOGO STYLING */
+        .trust-icon {
+            height: 26px; /* Uniform height */
             width: auto;
-            object-fit: contain;
-            filter: grayscale(100%);
+            fill: #888; /* Make them all uniform grey */
+            transition: all 0.3s ease;
             opacity: 0.7;
-            transition: all 0.3s;
         }
-        .trust-logo:hover { filter: grayscale(0%); opacity: 1.0; }
         
+        .trust-icon:hover {
+            fill: #111; /* Turn black on hover */
+            opacity: 1.0;
+            transform: scale(1.05);
+        }
+
+        /* Specific tweaks for visual balance */
+        .icon-stripe { height: 26px; }
+        .icon-twilio { height: 28px; }
+        .icon-openai { height: 24px; }
+        .icon-supabase { height: 26px; }
+        .icon-usps { height: 32px; }
+
         /* FOOTER */
         .footer {
             margin-top: auto;
@@ -147,20 +159,34 @@
                 Don't let their stories fade.<br>
                 We interview your parents over the phone, transcribe their memories, and mail you physical keepsake letters.
             </div>
+            
             <a href="https://app.verbapost.com" class="btn btn-primary">📚 Start Your Family Archive</a>
         </div>
 
         <div class="trust-label">Secure Infrastructure</div>
         <div class="trust-container">
-            <img class="trust-logo" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjAgMjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTU5LjYgMTMuOGMtLjEgMC0uMiAwLS4zLjF2Ni44aC0zLjR2LTguOGgzLjR2MS4yYy43LTEgMS44LTEuNCAzLTEuNCAwIDAgLjEgMCAuMSAwVjEzLjh6bS01Ny4xIDMuOWMuNyAxLjcgMi4zIDIuNiA0LjEgMi42IDIuMyAwIDMuOS0xLjIgMy45LTMuMSAwLTEuNy0xLjMtMi41LTMuNS0zLjMtMi4xLS44LTMuMi0xLjQtMy4yLTIuOCAwLTEuNSAxLjMtMi41IDMuNS0yLjUgMS45IDAgMy40LjkgMy45IDIuNGwyLjktMS44QzEzLjIgNy4zIDEwLjggNiA3IDYgMy4yIDYgMCA4LjMgMCAxMi40YzAgMyAxLjkgNC42IDUuMiA1LjcgMi4yLjggMi43IDEuNSAyLjcgMi40IDAgMS4xLTEuMyAxLjctMy4xIDEuNy0yLjMgMC0zLjgtMS4zLTQuNC0zTDIuNSAxNy43ek0zNi4yIDZ2MTEuMmgyLjR2Mi42aC01LjhWNmgzLjR6bS04LjggMTQuNmMtMi4xIDAtMy43LTEuNy0zLjctNC4xIDAtMi40IDEuNS00LjEgMy43LTQuMSAxLjEgMCAyLjEuNSAyLjYgMS40di01LjJoMy40djEyLjVoLTMuNHYtMS4xYy0uNi45LTEuNSAxLjUtMi42IDEuNXptLjQtMi41Yy45IDAgMS42LS41IDItMS4zdi0yLjhjLS40LS44LTEuMS0xLjMtMi0xLjMtMS4xIDAtMS45LjktMS45IDIuNyAwIDEuOC44IDIuNyAxLjkgMi43em0xMC4yIDMuOGMtMS4zIDAtMi4zLS4zLTMtLjh2LTIuOWMuOC41IDEuOC45IDIuOC45IDEuMSAwIDEuNS0uNCAxLjUtLjk2IDAtLjU3LS40LS44My0xLjU4LTEuMTUtMS43Ni0uNDYtMy4zNS0xLjI2LTMuMzUtMy43MiAwLTEuOTcgMS41Mi0zLjM3IDMuNzYtMy4zNyAxLjIyIDAgMi4xNi4zMiAyLjc4LjZsLS42IDIuNWMtLjctLjQtMS41My0uNy0yLjM4LS43LS45IDAtMS4yNi4zNi0xLjI2Ljg3IDAgLjUzLjM3LjgxIDEuNjQgMS4yMSAxLjguNTcgMy4yOCAxLjQ2IDMuMjggMy43IDAgMi4xLTEuNiAzLjQxLTMuNjggMy40MXptMTUuMiAwaC0zLjR2LTEuMWMtLjUuOS0xLjUgMS41LTIuNiAxLjUtMi4xIDAtMy43LTEuNy0zLjctNC4xIDAtMi40IDEuNS00LjEgMy43LTQuMSAxLjEgMCAyLjEuNSAyLjYgMS40di01LjJoMy40djEyLjV6bS01LjYtMS4zYy45IDAgMS42LS41IDItMS4zdi0yLjhjLS40LS44LTEuMS0xLjMtMi0xLjMtMS4xIDAtMS45LjktMS45IDIuNyAwIDEuOC44IDIuNyAxLjkgMi43em0tMzYuMy0uNmwtMy40IDEuOVY2aDMuNHYxMS45eiIgZmlsbD0iIzYzN0MyQyIvPjwvc3ZnPg==" style="height: 28px;" alt="Stripe">
+            
+            <svg class="trust-icon icon-stripe" viewBox="0 0 60 25" xmlns="http://www.w3.org/2000/svg">
+                <path d="M59.6 13.8c-.1 0-.2 0-.3.1v6.8h-3.4v-8.8h3.4v1.2c.7-1 1.8-1.4 3-1.4 0 0 .1 0 .1 0V13.8zm-57.1 3.9c.7 1.7 2.3 2.6 4.1 2.6 2.3 0 3.9-1.2 3.9-3.1 0-1.7-1.3-2.5-3.5-3.3-2.1-.8-3.2-1.4-3.2-2.8 0-1.5 1.3-2.5 3.5-2.5 1.9 0 3.4.9 3.9 2.4l2.9-1.8C13.2 7.3 10.8 6 7 6 3.2 6 0 8.3 0 12.4c0 3 1.9 4.6 5.2 5.7 2.2.8 2.7 1.5 2.7 2.4 0 1.1-1.3 1.7-3.1 1.7-2.3 0-3.8-1.3-4.4-3L2.5 17.7zM36.2 6v11.2h2.4v2.6h-5.8V6h3.4zm-8.8 14.6c-2.1 0-3.7-1.7-3.7-4.1 0-2.4 1.5-4.1 3.7-4.1 1.1 0 2.1.5 2.6 1.4v-5.2h3.4v12.5h-3.4v-1.1c-.6.9-1.5 1.5-2.6 1.5zm.4-2.5c.9 0 1.6-.5 2-1.3v-2.8c-.4-.8-1.1-1.3-2-1.3-1.1 0-1.9.9-1.9 2.7 0 1.8.8 2.7 1.9 2.7zm10.2 3.8c-1.3 0-2.3-.3-3-.8v-2.9c.8.5 1.8.9 2.8.9 1.1 0 1.5-.4 1.5-.96 0-.57-.4-.83-1.58-1.15-1.76-.46-3.35-1.26-3.35-3.72 0-1.97 1.52-3.37 3.76-3.37 1.22 0 2.16.32 2.78.6l-.6 2.5c-.7-.4-1.53-.7-2.38-.7-.9 0-1.26.36-1.26.87 0 .53.37.81 1.64 1.21 1.8.57 3.28 1.46 3.28 3.7 0 2.1-1.6 3.41-3.68 3.41zm15.2 0h-3.4v-1.1c-.5.9-1.5 1.5-2.6 1.5-2.1 0-3.7-1.7-3.7-4.1 0-2.4 1.5-4.1 3.7-4.1 1.1 0 2.1.5 2.6 1.4v-5.2h3.4v12.5zm-5.6-1.3c.9 0 1.6-.5 2-1.3v-2.8c-.4-.8-1.1-1.3-2-1.3-1.1 0-1.9.9-1.9 2.7 0 1.8.8 2.7 1.9 2.7zm-36.3-.6l-3.4 1.9V6h3.4v11.9z"/>
+            </svg>
 
-            <img class="trust-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAzMCI+PHBhdGggZmlsbD0iI0YyMjkzRCIgZD0iTTE1IDBDNi43MTYgMCAwIDYuNzE2IDAgMTVzNi43MTYgMTUgMTUgMTUgMTUtNi43MTYgMTUtMTVTMjMuMjg0IDAgMTUgMHptMCAyNi4yNWMtNi4yMTMgMC0xMS4yNS01LjAzNy0xMS4yNS0xMS4yNVM4Ljc4NyAzLjc1IDE1IDMuNzUgMjYuMjUgOC43ODcgMjYuMjUgMTUgMjEuMjEzIDI2LjI1IDE1IDI2LjI1eiIvPjxjaXJjbGUgZmlsbD0iI0YyMjkzRCIgY3g9IjE1IiBjeT0iMTUiIHI9IjUuMjUiLz48L3N2Zz4=" style="height: 32px;" alt="Twilio">
+            <svg class="trust-icon icon-twilio" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 0C6.716 0 0 6.716 0 15s6.716 15 15 15 15-6.716 15-15S23.284 0 15 0zm0 26.25c-6.213 0-11.25-5.037-11.25-11.25S8.787 3.75 15 3.75 26.25 8.787 26.25 15 21.213 26.25 15 26.25z"/>
+                <circle cx="15" cy="15" r="5.25"/>
+            </svg>
 
-            <img class="trust-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzQxMjkyMSI+PHBhdGggZD0iTTIyLjI4MTkgOS44MjExYTUuOTk3OCA1Ljk5NzggMCAwIDAtLjQ3NjUtNC44ODc5IDYuMDA3IDYuMDA3IDAgMCAwLTQuMDg1OS0zLjA2NTkgOC45MzcgOC45MzcgMCAwIDAtOC45MjcxLjE3NDEgNi4wMDM5IDYuMDAzOSAwIDAgMC0zLjcwMzYgMS45OCBFLjAxMjUgNi4wMTI1IDAgMCAwIDkuNTQ0NSAxMi43NyA4LjkyNjcgOC45MjY3IDAgMCAwIDExLjc1NyAyMS41NzFBNS45OTU5IDUuOTk1OSAwIDAgMCAxNi44ODMxIDIxYTYuMDAxNiA2LjAwMTYgMCAwIDAgMy43OTA2LTEuOTAxOCA1Ljk5OTEgNS45OTkxIDAgMCAwIDEuMjQwMi00Ljk0MDMgOC45NDIgOC45NDIgMCAwIDAgLjM2OC00LjMzNjh6bS0zLjY2MDYgOC44NDY2YTQuNDQ0IDQuNDQ0IDAgMCAxLTIuNjkwNiAxLjQ1NTNsLTEuOTU4LS40MDk3YTEuNDUyNiAxLjQ1MjYgMCAwIDAtLjQ3MS0yLjgyNjdsMS4yODkyLjkzNDYgNC4wNjUzLjg0NTh6Ii8+PC9zdmc+" style="height: 28px;" alt="OpenAI">
+            <svg class="trust-icon icon-openai" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.2819 9.8211a5.9978 5.9978 0 0 0-.4765-4.8879 6.007 6.007 0 0 0-4.0859-3.0659 8.937 8.937 0 0 0-8.9271.1741 6.0039 6.0039 0 0 0-3.7036 1.98 E.0125 6.0125 0 0 0 9.5445 12.77 8.9267 8.9267 0 0 0 11.757 21.571A5.9959 5.9959 0 0 0 16.8831 21a6.0016 6.0016 0 0 0 3.7906-1.9018 5.9991 5.9991 0 0 0 1.2402-4.9403 8.942 8.942 0 0 0 .368-4.3368zm-3.6606 8.8466a4.444 4.444 0 0 1-2.6906 1.4553l-1.958-.4097a1.4526 1.4526 0 0 0-.471-2.8267l1.2892.9346 4.0653.8458z"/>
+            </svg>
 
-            <img class="trust-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzNDQ0Y4RSI+PHBhdGggZD0iTTEyIDBDNS4zNzMgMCAwIDUuMzczIDAgMTJzNS4zNzMgMTIgMTIgMTIgMTItNS4zNzMgMTItMTJTMTguNjI3IDAgMTIgMHptMS4yIDUuNGwzLjYgNkg5LjZ2Ny4ybC0zLjYtNmg3LjJWNS40eiIvPjwvc3ZnPg==" style="height: 30px;" alt="Supabase">
+            <svg class="trust-icon icon-supabase" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm1.2 5.4l3.6 6H9.6v7.2l-3.6-6h7.2V5.4z"/>
+            </svg>
 
-            <img class="trust-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PHBhdGggZmlsbD0iIzMzMzM2NiIgZD0iTTI1IDBDMTEuMiAwIDAgMTEuMiAwIDI1czExLjIgMjUgMjUgMjUgMjUtMTEuMiAyNS0yNVMzOC44IDAgMjUgMHptMTQuMyAxNS4xbC05LjYgMjAuNi0xOS4zLTguNyA5LjctMjAuNiAxOS4yIDguN3oiLz48L3N2Zz4=" style="height: 35px;" alt="USPS">
+            <svg class="trust-icon icon-usps" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 0C11.2 0 0 11.2 0 25s11.2 25 25 25 25-11.2 25-25S38.8 0 25 0zm14.3 15.1l-9.6 20.6-19.3-8.7 9.7-20.6 19.3 8.7z"/>
+            </svg>
+
         </div>
 
         <div style="margin-top: 50px; border-top: 1px dashed #ddd; padding-top: 20px;">
