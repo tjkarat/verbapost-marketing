@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerbaPost | The Family Archive</title>
+    
+    <meta name="description" content="Preserve your family's legacy. We interview your loved ones over the phone, transcribe their memories, and mail you physical keepsake letters.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="VerbaPost | The Family Archive">
+    <meta property="og:description" content="Don't let their stories fade. Automated voice interviews turned into physical legacy letters.">
+    <meta property="og:image" content="https://verbapost.com/og-image.jpg"> <meta property="twitter:card" content="summary_large_image">
+
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Helvetica+Neue:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* LAYOUT CONTAINER */
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 4rem 1rem;
+            border-bottom: 1px solid #eaeaea;
+            margin-bottom: 2rem;
+        }
+
+        .hero-title {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            color: #111;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            font-weight: 300;
+            color: #555;
+            margin: 1rem auto 2rem auto;
+            max-width: 700px;
+            line-height: 1.5;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            width: 100%;
+            max-width: 300px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #d93025;
+            color: white;
+            border: 1px solid #d93025;
+        }
+        .btn-primary:hover { background-color: #b91c1c; }
+
+        .btn-secondary {
+            background-color: #ffffff;
+            color: #333;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+        .btn-secondary:hover { border-color: #999; background-color: #f9f9f9; }
+
+        /* LOGOS */
+        .trust-label {
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #999;
+            font-weight: 600;
+            margin-top: 50px;
+            margin-bottom: 15px;
+        }
+
+        .trust-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            opacity: 0.8;
+            margin-bottom: 40px;
+        }
+
+        .trust-logo {
+            height: 24px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+        .trust-logo:hover { filter: grayscale(0%); opacity: 1.0; }
+        
+        /* Specific adjustments */
+        .logo-usps { height: 35px; } 
+        .logo-twilio { height: 28px; }
+
+        /* FOOTER */
+        .footer {
+            margin-top: auto;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            width: 100%;
+            border-top: 1px dashed #ddd;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-link {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .footer-link:hover { text-decoration: underline; }
+
+        .copyright {
+            color: #ccc;
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="hero">
+            <div class="hero-title">The Family Archive</div>
+            <div class="hero-subtitle">
+                Don't let their stories fade.<br>
+                We interview your parents over the phone, transcribe their memories, and mail you physical keepsake letters.
+            </div>
+            
+            <a href="https://app.verbapost.com" class="btn btn-primary">📚 Start Your Family Archive</a>
+        </div>
+
+        <div class="trust-label">Secure Infrastructure</div>
+        <div class="trust-container">
+            <img class="trust-logo" src="https://cdn.simpleicons.org/stripe/635BFF" alt="Stripe">
+            <img class="trust-logo logo-twilio" src="https://cdn.simpleicons.org/twilio/F22F46" alt="Twilio">
+            <img class="trust-logo" src="https://cdn.simpleicons.org/openai/000000" alt="OpenAI">
+            <img class="trust-logo" src="https://cdn.simpleicons.org/supabase/3ECF8E" alt="Supabase">
+            <img class="trust-logo logo-usps" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/United_States_Postal_Service_Logo.svg/320px-United_States_Postal_Service_Logo.svg.png" alt="USPS">
+        </div>
+
+        <div style="margin-top: 50px; border-top: 1px dashed #ddd; padding-top: 20px;">
+            <div style="font-size: 0.9rem; color: #888; margin-bottom: 10px;">Looking to send a single letter?</div>
+            <a href="https://app.verbapost.com/?mode=utility" class="btn btn-secondary">📮 Go to Letter Store</a>
+        </div>
+
+        <div class="footer">
+            <div class="footer-links">
+                <a href="https://app.verbapost.com/?app_mode=blog" class="footer-link">📰 Blog</a>
+                <a href="https://app.verbapost.com/?app_mode=legal" class="footer-link">⚖️ Legal / Terms</a>
+            </div>
+            <div class="copyright">VerbaPost • Private • Secure • Forever</div>
+        </div>
+    </div>
+
+</body>
+</html>
