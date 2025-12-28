@@ -9,7 +9,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="VerbaPost | The Family Archive">
     <meta property="og:description" content="Don't let their stories fade. Automated voice interviews turned into physical legacy letters.">
-    <meta property="og:image" content="https://verbapost.com/og-image.jpg"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:card" content="summary_large_image">
 
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Helvetica+Neue:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -26,7 +26,6 @@
             min-height: 100vh;
         }
 
-        /* LAYOUT CONTAINER */
         .container {
             width: 100%;
             max-width: 800px;
@@ -89,7 +88,7 @@
         }
         .btn-secondary:hover { border-color: #999; background-color: #f9f9f9; }
 
-        /* LOGOS */
+        /* TRUST BADGES */
         .trust-label {
             font-size: 0.75rem;
             letter-spacing: 1.5px;
@@ -105,13 +104,13 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 30px;
+            gap: 35px;
             opacity: 0.8;
             margin-bottom: 40px;
         }
 
         .trust-logo {
-            height: 24px;
+            height: 28px;
             width: auto;
             object-fit: contain;
             filter: grayscale(100%);
@@ -120,10 +119,6 @@
         }
         .trust-logo:hover { filter: grayscale(0%); opacity: 1.0; }
         
-        /* Specific adjustments */
-        .logo-usps { height: 35px; } 
-        .logo-twilio { height: 28px; }
-
         /* FOOTER */
         .footer {
             margin-top: auto;
@@ -132,25 +127,15 @@
             width: 100%;
             border-top: 1px dashed #ddd;
         }
-        
         .footer-links {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-bottom: 20px;
         }
-
-        .footer-link {
-            color: #666;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
+        .footer-link { color: #666; text-decoration: none; font-size: 0.9rem; }
         .footer-link:hover { text-decoration: underline; }
-
-        .copyright {
-            color: #ccc;
-            font-size: 0.75rem;
-        }
+        .copyright { color: #ccc; font-size: 0.75rem; }
     </style>
 </head>
 <body>
@@ -162,17 +147,20 @@
                 Don't let their stories fade.<br>
                 We interview your parents over the phone, transcribe their memories, and mail you physical keepsake letters.
             </div>
-            
             <a href="https://app.verbapost.com" class="btn btn-primary">📚 Start Your Family Archive</a>
         </div>
 
         <div class="trust-label">Secure Infrastructure</div>
         <div class="trust-container">
-            <img class="trust-logo" src="https://cdn.simpleicons.org/stripe/635BFF" alt="Stripe">
-            <img class="trust-logo logo-twilio" src="https://cdn.simpleicons.org/twilio/F22F46" alt="Twilio">
-            <img class="trust-logo" src="https://cdn.simpleicons.org/openai/000000" alt="OpenAI">
-            <img class="trust-logo" src="https://cdn.simpleicons.org/supabase/3ECF8E" alt="Supabase">
-            <img class="trust-logo logo-usps" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/United_States_Postal_Service_Logo.svg/320px-United_States_Postal_Service_Logo.svg.png" alt="USPS">
+            <img class="trust-logo" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjAgMjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTU5LjYgMTMuOGMtLjEgMC0uMiAwLS4zLjF2Ni44aC0zLjR2LTguOGgzLjR2MS4yYy43LTEgMS44LTEuNCAzLTEuNCAwIDAgLjEgMCAuMSAwVjEzLjh6bS01Ny4xIDMuOWMuNyAxLjcgMi4zIDIuNiA0LjEgMi42IDIuMyAwIDMuOS0xLjIgMy45LTMuMSAwLTEuNy0xLjMtMi41LTMuNS0zLjMtMi4xLS44LTMuMi0xLjQtMy4yLTIuOCAwLTEuNSAxLjMtMi41IDMuNS0yLjUgMS45IDAgMy40LjkgMy45IDIuNGwyLjktMS44QzEzLjIgNy4zIDEwLjggNiA3IDYgMy4yIDYgMCA4LjMgMCAxMi40YzAgMyAxLjkgNC42IDUuMiA1LjcgMi4yLjggMi43IDEuNSAyLjcgMi40IDAgMS4xLTEuMyAxLjctMy4xIDEuNy0yLjMgMC0zLjgtMS4zLTQuNC0zTDIuNSAxNy43ek0zNi4yIDZ2MTEuMmgyLjR2Mi42aC01LjhWNmgzLjR6bS04LjggMTQuNmMtMi4xIDAtMy43LTEuNy0zLjctNC4xIDAtMi40IDEuNS00LjEgMy43LTQuMSAxLjEgMCAyLjEuNSAyLjYgMS40di01LjJoMy40djEyLjVoLTMuNHYtMS4xYy0uNi45LTEuNSAxLjUtMi42IDEuNXptLjQtMi41Yy45IDAgMS42LS41IDItMS4zdi0yLjhjLS40LS44LTEuMS0xLjMtMi0xLjMtMS4xIDAtMS45LjktMS45IDIuNyAwIDEuOC44IDIuNyAxLjkgMi43em0xMC4yIDMuOGMtMS4zIDAtMi4zLS4zLTMtLjh2LTIuOWMuOC41IDEuOC45IDIuOC45IDEuMSAwIDEuNS0uNCAxLjUtLjk2IDAtLjU3LS40LS44My0xLjU4LTEuMTUtMS43Ni0uNDYtMy4zNS0xLjI2LTMuMzUtMy43MiAwLTEuOTcgMS41Mi0zLjM3IDMuNzYtMy4zNyAxLjIyIDAgMi4xNi4zMiAyLjc4LjZsLS42IDIuNWMtLjctLjQtMS41My0uNy0yLjM4LS43LS45IDAtMS4yNi4zNi0xLjI2Ljg3IDAgLjUzLjM3LjgxIDEuNjQgMS4yMSAxLjguNTcgMy4yOCAxLjQ2IDMuMjggMy43IDAgMi4xLTEuNiAzLjQxLTMuNjggMy40MXptMTUuMiAwaC0zLjR2LTEuMWMtLjUuOS0xLjUgMS41LTIuNiAxLjUtMi4xIDAtMy43LTEuNy0zLjctNC4xIDAtMi40IDEuNS00LjEgMy43LTQuMSAxLjEgMCAyLjEuNSAyLjYgMS40di01LjJoMy40djEyLjV6bS01LjYtMS4zYy45IDAgMS42LS41IDItMS4zdi0yLjhjLS40LS44LTEuMS0xLjMtMi0xLjMtMS4xIDAtMS45LjktMS45IDIuNyAwIDEuOC44IDIuNyAxLjkgMi43em0tMzYuMy0uNmwtMy40IDEuOVY2aDMuNHYxMS45eiIgZmlsbD0iIzYzN0MyQyIvPjwvc3ZnPg==" style="height: 28px;" alt="Stripe">
+
+            <img class="trust-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAzMCI+PHBhdGggZmlsbD0iI0YyMjkzRCIgZD0iTTE1IDBDNi43MTYgMCAwIDYuNzE2IDAgMTVzNi43MTYgMTUgMTUgMTUgMTUtNi43MTYgMTUtMTVTMjMuMjg0IDAgMTUgMHptMCAyNi4yNWMtNi4yMTMgMC0xMS4yNS01LjAzNy0xMS4yNS0xMS4yNVM4Ljc4NyAzLjc1IDE1IDMuNzUgMjYuMjUgOC43ODcgMjYuMjUgMTUgMjEuMjEzIDI2LjI1IDE1IDI2LjI1eiIvPjxjaXJjbGUgZmlsbD0iI0YyMjkzRCIgY3g9IjE1IiBjeT0iMTUiIHI9IjUuMjUiLz48L3N2Zz4=" style="height: 32px;" alt="Twilio">
+
+            <img class="trust-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzQxMjkyMSI+PHBhdGggZD0iTTIyLjI4MTkgOS44MjExYTUuOTk3OCA1Ljk5NzggMCAwIDAtLjQ3NjUtNC44ODc5IDYuMDA3IDYuMDA3IDAgMCAwLTQuMDg1OS0zLjA2NTkgOC45MzcgOC45MzcgMCAwIDAtOC45MjcxLjE3NDEgNi4wMDM5IDYuMDAzOSAwIDAgMC0zLjcwMzYgMS45OCBFLjAxMjUgNi4wMTI1IDAgMCAwIDkuNTQ0NSAxMi43NyA4LjkyNjcgOC45MjY3IDAgMCAwIDExLjc1NyAyMS41NzFBNS45OTU5IDUuOTk1OSAwIDAgMCAxNi44ODMxIDIxYTYuMDAxNiA2LjAwMTYgMCAwIDAgMy43OTA2LTEuOTAxOCA1Ljk5OTEgNS45OTkxIDAgMCAwIDEuMjQwMi00Ljk0MDMgOC45NDIgOC45NDIgMCAwIDAgLjM2OC00LjMzNjh6bS0zLjY2MDYgOC44NDY2YTQuNDQ0IDQuNDQ0IDAgMCAxLTIuNjkwNiAxLjQ1NTNsLTEuOTU4LS40MDk3YTEuNDUyNiAxLjQ1MjYgMCAwIDAtLjQ3MS0yLjgyNjdsMS4yODkyLjkzNDYgNC4wNjUzLjg0NTh6Ii8+PC9zdmc+" style="height: 28px;" alt="OpenAI">
+
+            <img class="trust-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzNDQ0Y4RSI+PHBhdGggZD0iTTEyIDBDNS4zNzMgMCAwIDUuMzczIDAgMTJzNS4zNzMgMTIgMTIgMTIgMTItNS4zNzMgMTItMTJTMTguNjI3IDAgMTIgMHptMS4yIDUuNGwzLjYgNkg5LjZ2Ny4ybC0zLjYtNmg3LjJWNS40eiIvPjwvc3ZnPg==" style="height: 30px;" alt="Supabase">
+
+            <img class="trust-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PHBhdGggZmlsbD0iIzMzMzM2NiIgZD0iTTI1IDBDMTEuMiAwIDAgMTEuMiAwIDI1czExLjIgMjUgMjUgMjUgMjUtMTEuMiAyNS0yNVMzOC44IDAgMjUgMHptMTQuMyAxNS4xbC05LjYgMjAuNi0xOS4zLTguNyA5LjctMjAuNiAxOS4yIDguN3oiLz48L3N2Zz4=" style="height: 35px;" alt="USPS">
         </div>
 
         <div style="margin-top: 50px; border-top: 1px dashed #ddd; padding-top: 20px;">
