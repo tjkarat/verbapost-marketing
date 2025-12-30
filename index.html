@@ -115,22 +115,30 @@
         }
 
         /* LOGO STYLING */
-        .logo-svg, .logo-img {
+        .logo-svg {
             height: 28px;
             width: auto;
-            opacity: 0.6;
+            opacity: 0.5;
             filter: grayscale(100%);
             transition: all 0.3s ease;
+            fill: #555;
         }
         
-        /* SVG Fill Color */
-        .logo-svg {
-            fill: #777;
+        /* TEXT LOGO STYLING (USPS) */
+        .text-logo {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 800;
+            font-size: 1.4rem;
+            letter-spacing: -1px;
+            color: #888;
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            cursor: default;
         }
 
         /* Hover Effects */
         .logo-svg:hover { fill: #111; opacity: 1; }
-        .logo-img:hover { filter: grayscale(0%); opacity: 1; }
+        .text-logo:hover { color: #004B87; opacity: 1; } /* USPS Blue on hover */
 
         /* FOOTER */
         .footer {
@@ -148,7 +156,7 @@
         @media (max-width: 600px) {
             h1 { font-size: 2.5rem; }
             .logo-row { gap: 25px; }
-            .logo-svg, .logo-img { height: 24px; }
+            .logo-svg { height: 24px; }
         }
     </style>
 </head>
@@ -175,7 +183,7 @@
 
                 <svg class="logo-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.536 1.707a2 2 0 0 1 2.276 2.651L12.5 9h6a2 2 0 0 1 1.63 3.13l-8.683 11.235a2 2 0 0 1-3.418-1.745L9.5 16h-6a2 2 0 0 1-1.63-3.13L10.552 1.635a2 2 0 0 1 .984-.928Z"/></svg>
 
-                <img class="logo-img" src="https://www.vectorlogo.zone/logos/usps/usps-icon.svg" alt="USPS">
+                <span class="text-logo">USPS</span>
                 
             </div>
         </div>
