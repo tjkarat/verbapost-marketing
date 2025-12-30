@@ -92,53 +92,53 @@
             color: #333;
         }
 
-        /* TRUST BADGES */
-        .trust-section {
+        /* PROCESS SECTION (REPLACES LOGOS) */
+        .process-section {
             margin-top: 80px;
+            text-align: center;
         }
 
-        .trust-label {
-            font-size: 0.7rem;
+        .process-label {
+            font-size: 0.8rem;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: #aaa;
+            color: #999;
             font-weight: 700;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
-        .logo-row {
+        .process-grid {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             gap: 40px;
             flex-wrap: wrap;
         }
 
-        /* LOGO STYLING */
-        .logo-svg {
-            height: 28px;
-            width: auto;
-            opacity: 0.5;
-            filter: grayscale(100%);
-            transition: all 0.3s ease;
-            fill: #555;
-        }
-        
-        /* TEXT LOGO STYLING (USPS) */
-        .text-logo {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-weight: 800;
-            font-size: 1.4rem;
-            letter-spacing: -1px;
-            color: #888;
-            opacity: 0.6;
-            transition: all 0.3s ease;
-            cursor: default;
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
         }
 
-        /* Hover Effects */
-        .logo-svg:hover { fill: #111; opacity: 1; }
-        .text-logo:hover { color: #004B87; opacity: 1; } /* USPS Blue on hover */
+        .step-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .step-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .step-desc {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
 
         /* FOOTER */
         .footer {
@@ -155,8 +155,8 @@
         /* MOBILE */
         @media (max-width: 600px) {
             h1 { font-size: 2.5rem; }
-            .logo-row { gap: 25px; }
-            .logo-svg { height: 24px; }
+            .process-grid { gap: 30px; flex-direction: column; align-items: center; }
+            .process-step { max-width: 100%; padding: 0 20px; }
         }
     </style>
 </head>
@@ -171,20 +171,27 @@
 
         <a href="https://app.verbapost.com/?nav=heirloom" class="btn btn-primary">📚 Start Your Family Archive</a>
         
-        <div class="trust-section">
-            <div class="trust-label">Secure Infrastructure</div>
-            <div class="logo-row">
-                
-                <svg class="logo-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.816-1.39 2.049-1.39 1.8 0 2.976 1.351 3.289 2.067l1.894-.666c-.475-1.72-2.251-3.268-5.183-3.268-2.656 0-4.498 1.532-4.498 4.083 0 2.454 2.014 3.486 5.106 4.305 2.122.564 3.007 1.486 3.007 2.49 0 1.096-1.127 1.741-2.418 1.741-2.009 0-3.328-1.472-3.704-2.27l-1.928.68c.575 1.733 2.548 3.529 5.632 3.529 3.007 0 4.868-1.644 4.868-4.226 0-2.822-2.528-3.961-4.758-4.667"/></svg>
-                
-                <svg class="logo-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.222a9.778 9.778 0 1 1 0 19.556 9.778 9.778 0 0 1 0-19.556zM8.889 8a1.778 1.778 0 1 0 0 3.556 1.778 1.778 0 0 0 0-3.556zm6.222 0a1.778 1.778 0 1 0 0 3.556 1.778 1.778 0 0 0 0-3.556zM8.889 12.444a1.778 1.778 0 1 0 0 3.556 1.778 1.778 0 0 0 0-3.556zm6.222 0a1.778 1.778 0 1 0 0 3.556 1.778 1.778 0 0 0 0-3.556z"/></svg>
-                
-                <svg class="logo-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l3.1028-1.7999 3.1028 1.7999v3.5916l-3.1028 1.8-3.1028-1.8z"/></svg>
+        <div class="process-section">
+            <div class="process-label">How It Works</div>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <span class="step-icon">⚙️</span>
+                    <div class="step-title">1. Setup</div>
+                    <div class="step-desc">Create an account and add your loved one's phone number.</div>
+                </div>
 
-                <svg class="logo-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.536 1.707a2 2 0 0 1 2.276 2.651L12.5 9h6a2 2 0 0 1 1.63 3.13l-8.683 11.235a2 2 0 0 1-3.418-1.745L9.5 16h-6a2 2 0 0 1-1.63-3.13L10.552 1.635a2 2 0 0 1 .984-.928Z"/></svg>
+                <div class="process-step">
+                    <span class="step-icon">📞</span>
+                    <div class="step-title">2. We Call</div>
+                    <div class="step-desc">Our friendly AI interviewer calls them. They share a story. No apps required.</div>
+                </div>
 
-                <span class="text-logo">USPS</span>
-                
+                <div class="process-step">
+                    <span class="step-icon">📮</span>
+                    <div class="step-title">3. You Keep</div>
+                    <div class="step-desc">We transcribe the audio and mail you a physical letter for your archive.</div>
+                </div>
             </div>
         </div>
 
