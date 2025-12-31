@@ -3,12 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VerbaPost | The Family Archive</title>
-    <meta name="description" content="Don't let their stories fade. We interview your parents over the phone, transcribe their memories, and mail you physical keepsake letters.">
+    
+    <title>VerbaPost | The Family Archive & Voice Biography Service</title>
+    <meta name="description" content="Turn your parents' memories into physical keepsake letters. VerbaPost interviews your loved ones over the phone and mails you their life stories.">
+    <link rel="canonical" href="https://verbapost.com/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://verbapost.com/">
+    <meta property="og:title" content="VerbaPost | The Family Archive">
+    <meta property="og:description" content="Don't let their stories fade. We interview your parents over the phone and mail you physical keepsake letters.">
+    <meta property="og:image" content="https://app.verbapost.com/static/social-preview.jpg"> <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VerbaPost | The Family Archive">
+    <meta name="twitter:description" content="Turn phone calls into physical legacy letters.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Helvetica+Neue:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "VerbaPost Family Archive",
+      "url": "https://verbapost.com",
+      "description": "A voice-to-letter biography service that interviews seniors and mails physical transcripts to families.",
+      "offers": {
+        "@type": "Offer",
+        "price": "19.00",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "19.00",
+          "priceCurrency": "USD",
+          "unitText": "month"
+        }
+      }
+    }
+    </script>
 
     <style>
         /* BASE STYLES */
@@ -45,6 +76,26 @@
             margin-bottom: 20px;
             letter-spacing: -1px;
             line-height: 1.1;
+        }
+
+        /* Semantic changes for SEO without breaking design */
+        h2.process-label {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #999;
+            font-weight: 700;
+            margin-bottom: 40px;
+            border: none; /* Reset default H2 styling */
+            margin-top: 0;
+        }
+
+        h3.step-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 8px;
+            margin-top: 0;
         }
 
         .subtitle {
@@ -92,19 +143,10 @@
             color: #333;
         }
 
-        /* PROCESS SECTION (REPLACES LOGOS) */
+        /* PROCESS SECTION */
         .process-section {
             margin-top: 80px;
             text-align: center;
-        }
-
-        .process-label {
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #999;
-            font-weight: 700;
-            margin-bottom: 40px;
         }
 
         .process-grid {
@@ -125,13 +167,6 @@
             font-size: 2.5rem;
             margin-bottom: 15px;
             display: block;
-        }
-
-        .step-title {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: #333;
-            margin-bottom: 8px;
         }
 
         .step-desc {
@@ -172,24 +207,24 @@
         <a href="https://app.verbapost.com/?nav=heirloom" class="btn btn-primary">📚 Start Your Family Archive</a>
         
         <div class="process-section">
-            <div class="process-label">How It Works</div>
+            <h2 class="process-label">How It Works</h2>
             
             <div class="process-grid">
                 <div class="process-step">
                     <span class="step-icon">⚙️</span>
-                    <div class="step-title">1. Setup</div>
+                    <h3 class="step-title">1. Setup</h3>
                     <div class="step-desc">Create an account and add your loved one's phone number.</div>
                 </div>
 
                 <div class="process-step">
                     <span class="step-icon">📞</span>
-                    <div class="step-title">2. We Call</div>
+                    <h3 class="step-title">2. We Call</h3>
                     <div class="step-desc">Our friendly AI interviewer calls them. They share a story. No apps required.</div>
                 </div>
 
                 <div class="process-step">
                     <span class="step-icon">📮</span>
-                    <div class="step-title">3. You Keep</div>
+                    <h3 class="step-title">3. You Keep</h3>
                     <div class="step-desc">We transcribe the audio and mail you a physical letter for your archive.</div>
                 </div>
             </div>
