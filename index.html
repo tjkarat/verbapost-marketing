@@ -175,6 +175,60 @@
             line-height: 1.5;
         }
 
+        /* COMPARISON TABLE */
+        .comparison-section {
+            margin-top: 80px;
+            padding-bottom: 40px;
+        }
+
+        .comp-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            font-size: 0.95rem;
+            border: 1px solid #eee;
+        }
+
+        .comp-table th {
+            background-color: #f8f9fa;
+            color: #444;
+            font-weight: 700;
+            padding: 18px 15px;
+            text-align: left;
+            border-bottom: 2px solid #eaeaea;
+        }
+
+        .comp-table td {
+            padding: 16px 15px;
+            border-bottom: 1px solid #eee;
+            color: #555;
+            text-align: left;
+        }
+
+        .comp-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* VerbaPost Column Highlight */
+        .vp-col {
+            background-color: #fffbf0; /* Subtle Cream */
+            font-weight: 600;
+            color: #111 !important;
+            border-left: 1px solid #f0e6d2;
+            border-right: 1px solid #f0e6d2;
+        }
+
+        .vp-header {
+            background-color: #fffbf0 !important;
+            color: #d93025 !important;
+            border-bottom: 2px solid #d93025 !important;
+        }
+
+        .check { color: #059669; font-weight: bold; margin-right: 5px; }
+        .cross { color: #9ca3af; margin-right: 5px; }
+
         /* FOOTER */
         .footer {
             margin-top: auto;
@@ -192,6 +246,10 @@
             h1 { font-size: 2.5rem; }
             .process-grid { gap: 30px; flex-direction: column; align-items: center; }
             .process-step { max-width: 100%; padding: 0 20px; }
+            
+            /* Responsive Table Hack */
+            .comp-table { font-size: 0.85rem; }
+            .comp-table th, .comp-table td { padding: 12px 8px; }
         }
     </style>
 </head>
@@ -230,7 +288,53 @@
             </div>
         </div>
 
-        <div style="margin-top: 80px; border-top: 1px dashed #ddd; padding-top: 40px;">
+        <div class="comparison-section">
+            <h2 class="process-label">Why families choose VerbaPost</h2>
+            
+            <table class="comp-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%">Feature</th>
+                        <th class="vp-header" style="width: 25%">VerbaPost</th>
+                        <th style="width: 25%">StoryWorth / Email</th>
+                        <th style="width: 25%">DIY Recording</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Input Method</strong></td>
+                        <td class="vp-col">📞 Phone Call</td>
+                        <td>⌨️ Typing / Email</td>
+                        <td>📱 App / Mic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tech Required</strong></td>
+                        <td class="vp-col"><span class="check">✔</span> None (Landline OK)</td>
+                        <td><span class="cross">✘</span> Computer / Login</td>
+                        <td><span class="cross">✘</span> Smartphone App</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Physical Output</strong></td>
+                        <td class="vp-col">📮 Weekly Letters</td>
+                        <td>📚 Annual Book</td>
+                        <td>💾 Digital Files</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Editing</strong></td>
+                        <td class="vp-col">✨ AI Polish + Human</td>
+                        <td>Self-Edit</td>
+                        <td>None (Raw Audio)</td>
+                    </tr>
+                     <tr>
+                        <td><strong>Gratification</strong></td>
+                        <td class="vp-col"><span class="check">✔</span> Monthly Mail</td>
+                        <td><span class="cross">✘</span> Wait 1 Year</td>
+                        <td><span class="cross">✘</span> Never Printed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="margin-top: 60px; border-top: 1px dashed #ddd; padding-top: 40px;">
             <div style="color: #999; margin-bottom: 15px; font-size: 0.9rem;">Looking to send a single letter?</div>
             <a href="https://app.verbapost.com/?nav=store" class="btn btn-secondary">📮 Go to Letter Store</a>
         </div>
