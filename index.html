@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <title>VerbaPost | The Family Archive & Voice Biography Service</title>
     <meta name="description" content="Turn your parents' memories into physical keepsake letters. VerbaPost interviews your loved ones over the phone and mails you their life stories.">
@@ -42,6 +42,17 @@
     </script>
 
     <style>
+        /* --- CRITICAL MOBILE FIXES --- */
+        * {
+            box-sizing: border-box; /* Keeps padding inside width */
+            -webkit-font-smoothing: antialiased;
+        }
+
+        html, body {
+            overflow-x: hidden; /* Prevents side-scroll sway */
+            max-width: 100%;
+        }
+
         /* BASE STYLES */
         body {
             margin: 0;
@@ -56,6 +67,7 @@
 
         /* LAYOUT */
         .container {
+            width: 100%;
             max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
@@ -64,18 +76,19 @@
 
         /* HERO SECTION */
         .hero {
-            padding-top: 100px;
-            padding-bottom: 60px;
+            padding-top: 80px;
+            padding-bottom: 40px;
         }
 
         h1 {
             font-family: 'Merriweather', serif;
             font-weight: 700;
-            font-size: 3.5rem;
+            font-size: clamp(2.5rem, 5vw, 3.5rem); /* Responsive sizing */
             color: #111;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             letter-spacing: -1px;
             line-height: 1.1;
+            padding: 0 10px;
         }
 
         h2.process-label {
@@ -84,7 +97,7 @@
             text-transform: uppercase;
             color: #999;
             font-weight: 700;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             border: none;
             margin-top: 0;
         }
@@ -98,23 +111,26 @@
         }
 
         .subtitle {
-            font-size: 1.25rem;
+            font-size: clamp(1rem, 3vw, 1.25rem); /* Scalable font */
             font-weight: 300;
             color: #555;
-            line-height: 1.6;
+            line-height: 1.5;
             max-width: 650px;
-            margin: 0 auto 40px auto;
+            margin: 0 auto 30px auto;
+            padding: 0 10px;
         }
 
         /* BUTTONS */
         .btn {
             display: inline-block;
-            padding: 16px 32px;
+            padding: 16px 24px;
             font-size: 1.1rem;
             font-weight: 600;
             text-decoration: none;
             border-radius: 8px;
             transition: all 0.2s ease;
+            width: auto;
+            max-width: 100%;
         }
 
         .btn-primary {
@@ -144,7 +160,7 @@
 
         /* PROCESS SECTION */
         .process-section {
-            margin-top: 80px;
+            margin-top: 60px;
             text-align: center;
         }
 
@@ -158,8 +174,8 @@
 
         .process-step {
             flex: 1;
-            min-width: 200px;
-            max-width: 250px;
+            min-width: 250px; /* Ensure they stack on small screens */
+            max-width: 300px;
         }
 
         .step-icon {
@@ -176,33 +192,42 @@
 
         /* COMPARISON TABLE */
         .comparison-section {
-            margin-top: 80px;
-            padding-bottom: 40px;
+            margin-top: 60px;
+            padding-bottom: 20px;
+            width: 100%;
+        }
+        
+        /* SCROLL CONTAINER WRAPPER */
+        .table-scroll-wrapper {
             overflow-x: auto;
+            -webkit-overflow-scrolling: touch; /* Smooth iOS scroll */
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
         }
 
         .comp-table {
             width: 100%;
+            min-width: 700px; /* Force internal scroll instead of page scroll */
             border-collapse: collapse;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-radius: 12px;
-            overflow: hidden;
-            font-size: 0.9rem;
-            border: 1px solid #eee;
-            min-width: 800px;
+            font-size: 0.85rem;
+            background: white;
         }
 
         .comp-table th {
             background-color: #f8f9fa;
             color: #444;
             font-weight: 700;
-            padding: 18px 10px;
+            padding: 15px 10px;
             text-align: left;
             border-bottom: 2px solid #eaeaea;
+            white-space: nowrap; /* Keep headers readable */
         }
 
         .comp-table td {
-            padding: 16px 10px;
+            padding: 14px 10px;
             border-bottom: 1px solid #eee;
             color: #555;
             text-align: left;
@@ -239,13 +264,22 @@
         .footer a { color: #999; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
         .footer a:hover { color: #d93025; }
 
-        /* MOBILE */
+        /* MOBILE SPECIFIC OVERRIDES */
         @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
-            .process-grid { gap: 30px; flex-direction: column; align-items: center; }
-            .process-step { max-width: 100%; padding: 0 20px; }
-            .comp-table { font-size: 0.75rem; }
-            .comp-table th, .comp-table td { padding: 12px 6px; }
+            .hero { padding-top: 60px; }
+            .process-grid { gap: 40px; }
+            .process-step { margin: 0 auto; }
+            
+            /* Add visual cue for scrolling */
+            .comparison-section::after {
+                content: '← Swipe to compare →';
+                display: block;
+                text-align: center;
+                color: #999;
+                font-size: 0.75rem;
+                margin-top: 5px;
+                font-weight: 600;
+            }
         }
     </style>
 </head>
@@ -287,48 +321,51 @@
         <div class="comparison-section">
             <h2 class="process-label">Why families choose VerbaPost</h2>
             
-            <table class="comp-table">
-                <thead>
-                    <tr>
-                        <th style="width: 20%">Feature</th>
-                        <th class="vp-header" style="width: 20%">VerbaPost</th>
-                        <th style="width: 20%">StoryWorth</th>
-                        <th style="width: 20%">Storii</th>
-                        <th style="width: 20%">Remento</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Input Method</strong></td>
-                        <td class="vp-col">Phone Call</td>
-                        <td>Typing / Email</td>
-                        <td>Phone Call</td>
-                        <td>App / Photos</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Tech Required</strong></td>
-                        <td class="vp-col">None (Landline OK)</td>
-                        <td>Computer / Login</td>
-                        <td>None</td>
-                        <td>Smartphone App</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Physical Output</strong></td>
-                        <td class="vp-col">Weekly Letters</td>
-                        <td>Annual Book</td>
-                        <td>Annual Book</td>
-                        <td>Annual Book</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Time to Print</strong></td>
-                        <td class="vp-col">Sent Monthly</td>
-                        <td>Wait 1 Year</td>
-                        <td>Wait 1 Year</td>
-                        <td>Wait 1 Year</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-scroll-wrapper">
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 20%">Feature</th>
+                            <th class="vp-header" style="width: 20%">VerbaPost</th>
+                            <th style="width: 20%">StoryWorth</th>
+                            <th style="width: 20%">Storii</th>
+                            <th style="width: 20%">Remento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Input Method</strong></td>
+                            <td class="vp-col">Phone Call</td>
+                            <td>Typing / Email</td>
+                            <td>Phone Call</td>
+                            <td>App / Photos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tech Required</strong></td>
+                            <td class="vp-col">None (Landline OK)</td>
+                            <td>Computer / Login</td>
+                            <td>None</td>
+                            <td>Smartphone App</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Physical Output</strong></td>
+                            <td class="vp-col">Weekly Letters</td>
+                            <td>Annual Book</td>
+                            <td>Annual Book</td>
+                            <td>Annual Book</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Time to Print</strong></td>
+                            <td class="vp-col">Sent Monthly</td>
+                            <td>Wait 1 Year</td>
+                            <td>Wait 1 Year</td>
+                            <td>Wait 1 Year</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+        
         <div style="margin-top: 60px; border-top: 1px dashed #ddd; padding-top: 40px;">
             <div style="color: #999; margin-bottom: 15px; font-size: 0.9rem;">Looking to send a single letter?</div>
             <a href="https://app.verbapost.com/?nav=store" class="btn btn-secondary">📮 Go to Letter Store</a>
@@ -344,4 +381,3 @@
 
 </body>
 </html>
-#comment
