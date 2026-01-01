@@ -56,7 +56,7 @@
 
         /* LAYOUT */
         .container {
-            max-width: 900px;
+            max-width: 1000px; /* Increased width for extra columns */
             margin: 0 auto;
             padding: 0 20px;
             text-align: center;
@@ -179,6 +179,7 @@
         .comparison-section {
             margin-top: 80px;
             padding-bottom: 40px;
+            overflow-x: auto; /* Handles overflow on small screens */
         }
 
         .comp-table {
@@ -187,21 +188,22 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border-radius: 12px;
             overflow: hidden;
-            font-size: 0.95rem;
+            font-size: 0.85rem; /* Slightly smaller to fit 6 cols */
             border: 1px solid #eee;
+            min-width: 800px; /* Ensure table doesn't crush on mobile */
         }
 
         .comp-table th {
             background-color: #f8f9fa;
             color: #444;
             font-weight: 700;
-            padding: 18px 15px;
+            padding: 18px 10px;
             text-align: left;
             border-bottom: 2px solid #eaeaea;
         }
 
         .comp-table td {
-            padding: 16px 15px;
+            padding: 16px 10px;
             border-bottom: 1px solid #eee;
             color: #555;
             text-align: left;
@@ -226,9 +228,6 @@
             border-bottom: 2px solid #d93025 !important;
         }
 
-        .check { color: #059669; font-weight: bold; margin-right: 5px; }
-        .cross { color: #9ca3af; margin-right: 5px; }
-
         /* FOOTER */
         .footer {
             margin-top: auto;
@@ -248,8 +247,8 @@
             .process-step { max-width: 100%; padding: 0 20px; }
             
             /* Responsive Table Hack */
-            .comp-table { font-size: 0.85rem; }
-            .comp-table th, .comp-table td { padding: 12px 8px; }
+            .comp-table { font-size: 0.75rem; }
+            .comp-table th, .comp-table td { padding: 12px 6px; }
         }
     </style>
 </head>
@@ -294,42 +293,54 @@
             <table class="comp-table">
                 <thead>
                     <tr>
-                        <th style="width: 25%">Feature</th>
-                        <th class="vp-header" style="width: 25%">VerbaPost</th>
-                        <th style="width: 25%">StoryWorth / Email</th>
-                        <th style="width: 25%">DIY Recording</th>
+                        <th style="width: 16%">Feature</th>
+                        <th class="vp-header" style="width: 16%">VerbaPost</th>
+                        <th style="width: 16%">StoryWorth / Email</th>
+                        <th style="width: 16%">DIY Recording</th>
+                        <th style="width: 16%">Ancestry Sites</th>
+                        <th style="width: 16%">Video Bios</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><strong>Input Method</strong></td>
-                        <td class="vp-col">📞 Phone Call</td>
-                        <td>⌨️ Typing / Email</td>
-                        <td>📱 App / Mic</td>
+                        <td class="vp-col">Phone Call</td>
+                        <td>Typing / Email</td>
+                        <td>App / Mic</td>
+                        <td>Research</td>
+                        <td>Webcam Interview</td>
                     </tr>
                     <tr>
                         <td><strong>Tech Required</strong></td>
-                        <td class="vp-col"><span class="check">✔</span> None (Landline OK)</td>
-                        <td><span class="cross">✘</span> Computer / Login</td>
-                        <td><span class="cross">✘</span> Smartphone App</td>
+                        <td class="vp-col">None (Landline OK)</td>
+                        <td>Computer / Login</td>
+                        <td>Smartphone App</td>
+                        <td>Computer / Login</td>
+                        <td>Webcam / Zoom</td>
                     </tr>
                     <tr>
                         <td><strong>Physical Output</strong></td>
-                        <td class="vp-col">📮 Weekly Letters</td>
-                        <td>📚 Annual Book</td>
-                        <td>💾 Digital Files</td>
+                        <td class="vp-col">Weekly Letters</td>
+                        <td>Annual Book</td>
+                        <td>Digital Files</td>
+                        <td>Digital Tree</td>
+                        <td>Digital Video</td>
                     </tr>
                     <tr>
                         <td><strong>Editing</strong></td>
-                        <td class="vp-col">✨ AI Polish + Human</td>
+                        <td class="vp-col">AI Polish + Human</td>
                         <td>Self-Edit</td>
                         <td>None (Raw Audio)</td>
+                        <td>N/A (Data Entry)</td>
+                        <td>Professional</td>
                     </tr>
                      <tr>
                         <td><strong>Gratification</strong></td>
-                        <td class="vp-col"><span class="check">✔</span> Monthly Mail</td>
-                        <td><span class="cross">✘</span> Wait 1 Year</td>
-                        <td><span class="cross">✘</span> Never Printed</td>
+                        <td class="vp-col">Monthly Mail</td>
+                        <td>Wait 1 Year</td>
+                        <td>Never Printed</td>
+                        <td>Instant Access</td>
+                        <td>Digital Delivery</td>
                     </tr>
                 </tbody>
             </table>
