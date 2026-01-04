@@ -6,290 +6,246 @@
     
     <title>VerbaPost | The Family Archive & Voice Biography Service</title>
     <meta name="description" content="Turn your parents' memories into physical keepsake letters. VerbaPost interviews your loved ones over the phone and mails you their life stories.">
+    <meta name="keywords" content="family history, oral history service, voice biography, turn audio to letters, genealogy gift, senior memoir service">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://verbapost.com/">
     
+    <link rel="icon" type="image/png" href="https://app.verbapost.com/static/favicon.png">
+    <link rel="apple-touch-icon" href="https://app.verbapost.com/static/apple-touch-icon.png">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://verbapost.com/">
     <meta property="og:title" content="VerbaPost | The Family Archive">
     <meta property="og:description" content="Don't let their stories fade. We interview your parents over the phone and mail you physical keepsake letters.">
-    <meta property="og:image" content="https://app.verbapost.com/static/social-preview.jpg"> <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="https://app.verbapost.com/static/social-preview.jpg">
+    <meta property="og:image:alt" content="Elderly person using a phone to record family stories">
+    
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="VerbaPost | The Family Archive">
     <meta name="twitter:description" content="Turn phone calls into physical legacy letters.">
+    <meta name="twitter:image" content="https://app.verbapost.com/static/social-preview.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Helvetica+Neue:wght@300;400;600&display=swap" rel="stylesheet">
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "VerbaPost Family Archive",
-      "url": "https://verbapost.com",
-      "description": "A voice-to-letter biography service that interviews seniors and mails physical transcripts to families.",
-      "offers": {
-        "@type": "Offer",
-        "price": "19.00",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": "19.00",
-          "priceCurrency": "USD",
-          "unitText": "month"
+    [
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "VerbaPost Family Archive",
+          "url": "https://verbapost.com",
+          "description": "A voice-to-letter biography service that interviews seniors and mails physical transcripts to families.",
+          "provider": {
+            "@type": "Organization",
+            "name": "VerbaPost",
+            "logo": "https://app.verbapost.com/static/logo.png"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "19.00",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "19.00",
+              "priceCurrency": "USD",
+              "unitText": "month"
+            }
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "VerbaPost",
+          "url": "https://verbapost.com",
+          "logo": "https://app.verbapost.com/static/logo.png",
+          "sameAs": [
+            "https://twitter.com/verbapost",
+            "https://facebook.com/verbapost"
+          ]
         }
-      }
-    }
+    ]
     </script>
 
     <style>
         /* --- CRITICAL MOBILE FIXES --- */
-        * {
-            box-sizing: border-box; /* Keeps padding inside width */
-            -webkit-font-smoothing: antialiased;
-        }
-
-        html, body {
-            overflow-x: hidden; /* Prevents side-scroll sway */
-            max-width: 100%;
-        }
+        * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        html, body { overflow-x: hidden; max-width: 100%; }
 
         /* BASE STYLES */
         body {
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             background-color: #ffffff;
             color: #333;
-            display: flex;
-            flex-direction: column;
+            display: flex; flex-direction: column;
             min-height: 100vh;
         }
 
         /* LAYOUT */
         .container {
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
+            width: 100%; max-width: 1100px;
+            margin: 0 auto; padding: 0 20px;
             text-align: center;
         }
 
         /* HERO SECTION */
-        .hero {
-            padding-top: 80px;
-            padding-bottom: 40px;
-        }
+        .hero { padding-top: 80px; padding-bottom: 40px; }
 
         h1 {
-            font-family: 'Merriweather', serif;
-            font-weight: 700;
-            font-size: clamp(2.5rem, 5vw, 3.5rem); /* Responsive sizing */
-            color: #111;
-            margin-bottom: 15px;
-            letter-spacing: -1px;
-            line-height: 1.1;
-            padding: 0 10px;
+            font-family: 'Merriweather', serif; font-weight: 700;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: #111; margin-bottom: 15px;
+            letter-spacing: -1px; line-height: 1.1; padding: 0 10px;
         }
 
         h2.process-label {
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #999;
-            font-weight: 700;
-            margin-bottom: 30px;
-            border: none;
-            margin-top: 0;
+            font-size: 0.8rem; letter-spacing: 2px;
+            text-transform: uppercase; color: #999;
+            font-weight: 700; margin-bottom: 40px;
+            border: none; margin-top: 0;
         }
 
         h3.step-title {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: #333;
-            margin-bottom: 8px;
-            margin-top: 15px; /* Added spacing for image */
+            font-weight: 600; font-size: 1.2rem;
+            color: #333; margin-bottom: 8px; margin-top: 5px; 
         }
 
         .subtitle {
-            font-size: clamp(1rem, 3vw, 1.25rem); /* Scalable font */
-            font-weight: 300;
-            color: #555;
-            line-height: 1.5;
-            max-width: 650px;
-            margin: 0 auto 30px auto;
-            padding: 0 10px;
+            font-size: clamp(1rem, 3vw, 1.25rem); font-weight: 300;
+            color: #555; line-height: 1.5;
+            max-width: 650px; margin: 0 auto 30px auto; padding: 0 10px;
         }
 
         /* BUTTONS */
         .btn {
-            display: inline-block;
-            padding: 16px 24px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-            width: auto;
-            max-width: 100%;
+            display: inline-block; padding: 16px 24px;
+            font-size: 1.1rem; font-weight: 600;
+            text-decoration: none; border-radius: 8px;
+            transition: all 0.2s ease; width: auto; max-width: 100%;
         }
 
         .btn-primary {
-            background-color: #d93025; /* VerbaPost Red */
-            color: white;
+            background-color: #d93025; color: white;
             box-shadow: 0 4px 10px rgba(217, 48, 37, 0.3);
         }
-
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(217, 48, 37, 0.4);
         }
 
         .btn-secondary {
-            background-color: white;
-            color: #555;
-            border: 1px solid #e0e0e0;
-            font-size: 0.95rem;
-            padding: 12px 24px;
+            background-color: white; color: #555;
+            border: 1px solid #e0e0e0; font-size: 0.95rem; padding: 12px 24px;
         }
-        
         .btn-secondary:hover {
-            background-color: #f9f9f9;
-            border-color: #ccc;
-            color: #333;
+            background-color: #f9f9f9; border-color: #ccc; color: #333;
         }
 
         /* PROCESS SECTION */
-        .process-section {
-            margin-top: 60px;
-            text-align: center;
-        }
+        .process-section { margin-top: 80px; text-align: center; }
 
         .process-grid {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 40px;
-            flex-wrap: wrap;
+            display: flex; justify-content: center;
+            align-items: flex-start; gap: 30px; flex-wrap: wrap;
         }
 
         .process-step {
-            flex: 1;
-            min-width: 280px; /* Slightly wider for screenshots */
-            max-width: 320px;
+            flex: 1; min-width: 280px; max-width: 340px;
+            display: flex; flex-direction: column;
         }
 
-        /* Replaces old .step-icon style */
-        .step-img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border: 1px solid #eee;
-            margin-bottom: 10px;
-            display: block;
+        .step-img-wrapper {
+            height: 280px; display: flex;
+            align-items: flex-end; justify-content: center;
+            margin-bottom: 20px;
         }
+
+        .step-img {
+            max-height: 100%; max-width: 100%; width: auto;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .step-img:hover { transform: translateY(-5px); }
 
         .step-desc {
-            font-size: 0.95rem;
-            color: #666;
-            line-height: 1.5;
+            font-size: 1rem; color: #666;
+            line-height: 1.6; padding: 0 10px;
         }
 
         /* COMPARISON TABLE */
         .comparison-section {
-            margin-top: 80px;
-            padding-bottom: 20px;
-            width: 100%;
+            margin-top: 100px; padding-bottom: 20px; width: 100%;
         }
         
-        /* SCROLL CONTAINER WRAPPER */
         .table-scroll-wrapper {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch; /* Smooth iOS scroll */
-            width: 100%;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow-x: auto; -webkit-overflow-scrolling: touch;
+            width: 100%; margin-bottom: 20px;
+            border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border: 1px solid #eee;
         }
 
         .comp-table {
-            width: 100%;
-            min-width: 700px; /* Force internal scroll instead of page scroll */
-            border-collapse: collapse;
-            font-size: 0.9rem;
-            background: white;
+            width: 100%; min-width: 700px;
+            border-collapse: collapse; font-size: 0.95rem; background: white;
         }
 
         .comp-table th {
-            background-color: #f8f9fa;
-            color: #444;
-            font-weight: 700;
-            padding: 15px 15px;
-            text-align: left;
-            border-bottom: 2px solid #eaeaea;
-            white-space: nowrap; /* Keep headers readable */
+            background-color: #f8f9fa; color: #444; font-weight: 700;
+            padding: 18px 20px; text-align: left;
+            border-bottom: 2px solid #eaeaea; white-space: nowrap;
         }
 
         .comp-table td {
-            padding: 15px 15px;
-            border-bottom: 1px solid #eee;
-            color: #555;
-            text-align: left;
+            padding: 18px 20px; border-bottom: 1px solid #eee;
+            color: #555; text-align: left;
         }
+        .comp-table tr:last-child td { border-bottom: none; }
 
-        .comp-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        /* VerbaPost Column Highlight */
         .vp-col {
-            background-color: #fffbf0;
-            font-weight: 600;
-            color: #111 !important;
-            border-left: 1px solid #f0e6d2;
-            border-right: 1px solid #f0e6d2;
+            background-color: #fffbf0; font-weight: 600; color: #111 !important;
+            border-left: 1px solid #f0e6d2; border-right: 1px solid #f0e6d2;
         }
-
         .vp-header {
-            background-color: #fffbf0 !important;
-            color: #d93025 !important;
+            background-color: #fffbf0 !important; color: #d93025 !important;
             border-bottom: 2px solid #d93025 !important;
         }
 
         /* FOOTER */
         .footer {
-            margin-top: auto;
-            padding: 40px 0;
+            margin-top: auto; padding: 40px 0;
             border-top: 1px solid #f9f9f9;
-            font-size: 0.8rem;
-            color: #ccc;
+            font-size: 0.85rem; color: #ccc;
         }
-        
         .footer a { color: #999; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
         .footer a:hover { color: #d93025; }
 
-        /* MOBILE SPECIFIC OVERRIDES */
-        @media (max-width: 600px) {
+        /* MOBILE OVERRIDES */
+        @media (max-width: 768px) {
             .hero { padding-top: 60px; }
             .process-grid { gap: 40px; }
-            .process-step { margin: 0 auto; }
+            .process-step { margin: 0 auto; max-width: 100%; }
             
-            /* Add visual cue for scrolling */
+            .step-img-wrapper {
+                height: auto; display: block; margin-bottom: 15px;
+            }
+            .step-img { width: 100%; }
+
             .comparison-section::after {
                 content: '← Swipe to compare →';
-                display: block;
-                text-align: center;
-                color: #999;
-                font-size: 0.75rem;
-                margin-top: 5px;
-                font-weight: 600;
+                display: block; text-align: center;
+                color: #999; font-size: 0.75rem;
+                margin-top: 5px; font-weight: 600;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container hero">
+    <header class="container hero">
         <h1>The Family Archive</h1>
         <div class="subtitle">
             Don't let their stories fade.<br>
@@ -298,31 +254,48 @@
 
         <a href="https://app.verbapost.com/?nav=heirloom" class="btn btn-primary">📚 Start Your Family Archive</a>
         
-        <div class="process-section">
+        <section class="process-section">
             <h2 class="process-label">How It Works</h2>
             
             <div class="process-grid">
-                <div class="process-step">
-                    <img src="Verbapost-FamilyHistoryArchive-Keep.png" alt="Setup Interface: Adding interviewee details" class="step-img">
+                <article class="process-step">
+                    <div class="step-img-wrapper">
+                        <img src="Verbapost-FamilyHistoryArchive-Keep.png" 
+                             alt="VerbaPost Setup Interface showing interviewee details" 
+                             width="600" height="400" 
+                             class="step-img">
+                    </div>
                     <h3 class="step-title">1. Setup</h3>
                     <div class="step-desc">Create an account and add your loved one's phone number.</div>
-                </div>
+                </article>
 
-                <div class="process-step">
-                    <img src="Verbapost-FamilyHistoryArchive-call.png" alt="Calling Interface: Choose topic and call now" class="step-img">
+                <article class="process-step">
+                    <div class="step-img-wrapper">
+                        <img src="Verbapost-FamilyHistoryArchive-call.png" 
+                             alt="VerbaPost Calling Interface showing call options" 
+                             width="600" height="400"
+                             loading="lazy" 
+                             class="step-img">
+                    </div>
                     <h3 class="step-title">2. We Call</h3>
                     <div class="step-desc">Our friendly AI interviewer calls them. They share a story. No apps required.</div>
-                </div>
+                </article>
 
-                <div class="process-step">
-                    <img src="Verbapost-FamilyHistoryArchive-Setup.png" alt="Editor Interface: Editing transcript and sending mail" class="step-img">
+                <article class="process-step">
+                    <div class="step-img-wrapper">
+                        <img src="Verbapost-FamilyHistoryArchive-Setup.png" 
+                             alt="VerbaPost Editor Interface showing transcript and mail preview" 
+                             width="600" height="400"
+                             loading="lazy" 
+                             class="step-img">
+                    </div>
                     <h3 class="step-title">3. You Keep</h3>
                     <div class="step-desc">We transcribe the audio and mail you a physical letter for your archive.</div>
-                </div>
+                </article>
             </div>
-        </div>
+        </section>
 
-        <div class="comparison-section">
+        <section class="comparison-section">
             <h2 class="process-label">Why families choose VerbaPost</h2>
             
             <div class="table-scroll-wrapper">
@@ -368,20 +341,20 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+        </section>
         
         <div style="margin-top: 60px; border-top: 1px dashed #ddd; padding-top: 40px;">
             <div style="color: #999; margin-bottom: 15px; font-size: 0.9rem;">Looking to send a single letter?</div>
             <a href="https://app.verbapost.com/?nav=store" class="btn btn-secondary">📮 Go to Letter Store</a>
         </div>
-    </div>
+    </header>
 
-    <div class="container footer">
+    <footer class="container footer">
         <a href="https://app.verbapost.com/?nav=blog">Blog</a> • 
         <a href="https://app.verbapost.com/?nav=legal">Legal & Terms</a>
         <br><br>
         VerbaPost • Private • Secure
-    </div>
+    </footer>
 
 </body>
 </html>
