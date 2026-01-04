@@ -107,7 +107,7 @@
             font-size: 1.1rem;
             color: #333;
             margin-bottom: 8px;
-            margin-top: 0;
+            margin-top: 15px; /* Added spacing for image */
         }
 
         .subtitle {
@@ -174,13 +174,17 @@
 
         .process-step {
             flex: 1;
-            min-width: 250px; /* Ensure they stack on small screens */
-            max-width: 300px;
+            min-width: 280px; /* Slightly wider for screenshots */
+            max-width: 320px;
         }
 
-        .step-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+        /* Replaces old .step-icon style */
+        .step-img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+            margin-bottom: 10px;
             display: block;
         }
 
@@ -192,7 +196,7 @@
 
         /* COMPARISON TABLE */
         .comparison-section {
-            margin-top: 60px;
+            margin-top: 80px;
             padding-bottom: 20px;
             width: 100%;
         }
@@ -212,7 +216,7 @@
             width: 100%;
             min-width: 700px; /* Force internal scroll instead of page scroll */
             border-collapse: collapse;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             background: white;
         }
 
@@ -220,14 +224,14 @@
             background-color: #f8f9fa;
             color: #444;
             font-weight: 700;
-            padding: 15px 10px;
+            padding: 15px 15px;
             text-align: left;
             border-bottom: 2px solid #eaeaea;
             white-space: nowrap; /* Keep headers readable */
         }
 
         .comp-table td {
-            padding: 14px 10px;
+            padding: 15px 15px;
             border-bottom: 1px solid #eee;
             color: #555;
             text-align: left;
@@ -299,19 +303,19 @@
             
             <div class="process-grid">
                 <div class="process-step">
-                    <span class="step-icon">⚙️</span>
+                    <img src="Screenshot 2026-01-04 at 10.14.06 AM.png" alt="Setup Interface: Adding interviewee details" class="step-img">
                     <h3 class="step-title">1. Setup</h3>
                     <div class="step-desc">Create an account and add your loved one's phone number.</div>
                 </div>
 
                 <div class="process-step">
-                    <span class="step-icon">📞</span>
+                    <img src="Screenshot 2026-01-04 at 10.14.53 AM.png" alt="Calling Interface: Choose topic and call now" class="step-img">
                     <h3 class="step-title">2. We Call</h3>
                     <div class="step-desc">Our friendly AI interviewer calls them. They share a story. No apps required.</div>
                 </div>
 
                 <div class="process-step">
-                    <span class="step-icon">📮</span>
+                    <img src="Screenshot 2026-01-04 at 10.18.11 AM.png" alt="Editor Interface: Editing transcript and sending mail" class="step-img">
                     <h3 class="step-title">3. You Keep</h3>
                     <div class="step-desc">We transcribe the audio and mail you a physical letter for your archive.</div>
                 </div>
@@ -355,8 +359,8 @@
                             <td>Annual Book</td>
                         </tr>
                         <tr>
-                            <td><strong>Time to Print</strong></td>
-                            <td class="vp-col">Sent Monthly</td>
+                            <td><strong>Delivery Speed</strong></td>
+                            <td class="vp-col">Sent Weekly</td>
                             <td>Wait 1 Year</td>
                             <td>Wait 1 Year</td>
                             <td>Wait 1 Year</td>
