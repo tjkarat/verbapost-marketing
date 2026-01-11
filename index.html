@@ -16,7 +16,7 @@
     
     <meta name="description" content="90% of heirs fire their parents' advisors. Give clients a legacy preservation gift that keeps beneficiaries loyal to your firm. FINRA compliant, $99 setup.">
     
-    <meta name="keywords" content="heir attrition, estate planning client retention, wealth manager client gifts, legacy preservation service for advisors, FINRA compliant client gifts">
+    <meta name="keywords" content="heir attrition, estate planning client retention, wealth manager client gifts, legacy preservation service for advisors, FINRA compliant client gifts, wealth transfer planning, generational wealth retention">
     
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://verbapost.com/">
@@ -63,23 +63,6 @@
         },
         {
           "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "VerbaPost",
-          "url": "https://verbapost.com",
-          "logo": "https://app.verbapost.com/static/favicon.png",
-          "sameAs": [
-            "https://www.linkedin.com/company/verbapost",
-            "https://twitter.com/verbapost"
-          ],
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Nashville",
-            "addressRegion": "TN",
-            "addressCountry": "US"
-          }
-        },
-        {
-          "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [{
             "@type": "Question",
@@ -106,34 +89,32 @@
         * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
         html, body { overflow-x: hidden; max-width: 100%; }
 
-        /* BASE STYLES */
         body {
             margin: 0; padding: 0;
-            font-family: 'Inter', sans-serif; /* Clean Modern Sans */
+            font-family: 'Inter', sans-serif;
             background-color: #fdfdfd;
             color: #1e293b;
             display: flex; flex-direction: column;
             min-height: 100vh;
         }
 
-        /* LAYOUT */
         .container {
             width: 100%; max-width: 1100px;
             margin: 0 auto; padding: 0 20px;
-            text-align: center;
         }
 
         /* HERO SECTION */
         .hero { 
             padding-top: 100px; padding-bottom: 60px;
+            text-align: center;
             background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
         }
 
         h1 {
-            font-family: 'Playfair Display', serif; /* Trust/Legal Serif */
+            font-family: 'Playfair Display', serif;
             font-weight: 700;
             font-size: clamp(2.5rem, 5vw, 4rem);
-            color: #0f172a; /* Navy Slate */
+            color: #0f172a;
             margin-bottom: 20px;
             letter-spacing: -0.02em; line-height: 1.1; padding: 0 10px;
         }
@@ -153,6 +134,7 @@
             text-transform: uppercase; color: #64748b;
             font-weight: 700; margin-bottom: 40px;
             border: none; margin-top: 0;
+            text-align: center;
         }
 
         h3.step-title {
@@ -181,7 +163,7 @@
         }
 
         .btn-primary {
-            background-color: #0f172a; color: white; /* Navy */
+            background-color: #0f172a; color: white;
             border: 1px solid #0f172a;
             box-shadow: 0 4px 6px rgba(15, 23, 42, 0.1);
         }
@@ -189,15 +171,7 @@
             background-color: #1e293b; transform: translateY(-1px);
         }
 
-        .btn-outline {
-            background-color: transparent; color: #475569;
-            border: 1px solid #cbd5e1;
-        }
-        .btn-outline:hover {
-            background-color: white; border-color: #94a3b8; color: #0f172a;
-        }
-
-        /* NEW: TRUST BADGES */
+        /* TRUST BADGES */
         .trust-badges {
             font-size: 0.9rem; font-weight: 600; color: #475569;
             margin-top: 15px; margin-bottom: 40px;
@@ -205,7 +179,7 @@
         }
         .trust-item { color: #059669; }
 
-        /* NEW: STATS SECTION */
+        /* STATS SECTION */
         .stats-section {
             background-color: #0f172a; color: white;
             padding: 60px 20px; margin-bottom: 60px;
@@ -225,7 +199,7 @@
         .stat-number { display: block; font-size: 2.5rem; font-weight: 700; color: #38bdf8; margin-bottom: 5px; }
         .stat-desc { font-size: 0.9rem; color: #cbd5e1; line-height: 1.4; }
 
-        /* NEW: USE CASES */
+        /* USE CASES */
         .use-cases-grid {
             display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;
             max-width: 900px; margin: 0 auto 80px auto;
@@ -239,15 +213,20 @@
         .use-case-title { font-weight: 700; color: #0f172a; display: block; margin-bottom: 5px; }
         .use-case-text { font-size: 0.9rem; color: #64748b; }
 
+        /* CONTENT GUIDE (SEO) */
+        .content-guide {
+            max-width: 800px; margin: 0 auto 80px auto;
+            text-align: left; line-height: 1.7; color: #334155;
+        }
+        .content-guide h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #0f172a; margin-top: 30px; }
+        .content-guide p { margin-bottom: 15px; }
 
         /* PROCESS SECTION */
         .process-section { margin-top: 40px; text-align: center; }
-
         .process-grid {
             display: flex; justify-content: center;
             align-items: stretch; gap: 30px; flex-wrap: wrap;
         }
-
         .process-step {
             flex: 1; min-width: 280px; max-width: 320px;
             display: flex; flex-direction: column;
@@ -255,43 +234,58 @@
             border: 1px solid #e2e8f0; border-radius: 12px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
-
         .step-icon { font-size: 40px; margin-bottom: 20px; display: block; }
+        .step-desc { font-size: 0.95rem; color: #64748b; line-height: 1.6; }
 
-        .step-desc {
-            font-size: 0.95rem; color: #64748b;
-            line-height: 1.6;
+        /* FAQ SECTION */
+        .faq-section { 
+            max-width: 800px; margin: 0 auto 60px auto; text-align: left; 
         }
+        .faq-item { 
+            border-bottom: 1px solid #e2e8f0; padding: 20px 0; 
+        }
+        .faq-q { 
+            font-weight: 700; color: #0f172a; font-size: 1.1rem; margin-bottom: 10px; display: block;
+        }
+        .faq-a { color: #475569; }
 
-        /* COMPARISON TABLE */
+        /* BLOG PREVIEW */
+        .blog-section {
+            background-color: #f8fafc; padding: 60px 20px; margin-top: 60px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .blog-card {
+            background: white; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0;
+            text-align: left; transition: transform 0.2s;
+        }
+        .blog-card:hover { transform: translateY(-3px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .blog-title { font-weight: 700; color: #0f172a; margin-bottom: 10px; display: block; }
+        .blog-link { text-decoration: none; color: inherit; }
+
+        /* TABLE */
         .comparison-section {
-            margin-top: 100px; padding-bottom: 60px; width: 100%;
+            margin-top: 60px; padding-bottom: 60px; width: 100%;
             background-color: white; border-top: 1px solid #f1f5f9;
         }
-        
         .table-scroll-wrapper {
             overflow-x: auto; -webkit-overflow-scrolling: touch;
             width: 100%; margin-top: 40px;
             border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
             border: 1px solid #e2e8f0;
         }
-
         .comp-table {
             width: 100%; min-width: 700px;
             border-collapse: collapse; font-size: 0.95rem; background: white;
         }
-
         .comp-table th {
             background-color: #f8fafc; color: #334155; font-weight: 700;
             padding: 20px; text-align: left;
             border-bottom: 2px solid #e2e8f0; white-space: nowrap;
         }
-
         .comp-table td {
             padding: 20px; border-bottom: 1px solid #f1f5f9;
             color: #475569; text-align: left;
         }
-        
         .vp-col {
             background-color: #f0f9ff; font-weight: 600; color: #0f172a !important;
             border-left: 1px solid #e0f2fe; border-right: 1px solid #e0f2fe;
@@ -301,18 +295,14 @@
             border-bottom: 2px solid #0369a1 !important;
         }
 
-        /* SOCIAL PROOF (REMOVED) */
-
         /* FOOTER */
         .footer {
             margin-top: auto; padding: 40px 0;
-            background-color: #f8fafc; border-top: 1px solid #e2e8f0;
-            font-size: 0.85rem; color: #94a3b8;
+            background-color: #0f172a; color: #94a3b8; font-size: 0.85rem; text-align: center;
         }
-        .footer a { color: #64748b; text-decoration: none; margin: 0 12px; transition: color 0.2s; }
-        .footer a:hover { color: #0f172a; }
+        .footer a { color: #cbd5e1; text-decoration: none; margin: 0 12px; }
+        .footer a:hover { color: white; }
 
-        /* MOBILE OVERRIDES */
         @media (max-width: 768px) {
             .hero { padding-top: 60px; }
             h1 { font-size: 2.2rem; }
@@ -330,7 +320,7 @@
         <div class="badge">For Estate Planners & Attorneys</div>
         <h1>The Client Retention Gift That<br>Stops Heir Attrition</h1>
         <div class="subtitle">
-            The ultimate client retention tool. We interview your clients, capture their life stories, and mail physical letters to beneficiaries—branding <i>you</i> as the architect of their family legacy.
+            The ultimate client retention tool. We interview your clients, capture their life stories, and mail physical letters to beneficiaries&mdash;branding <i>you</i> as the architect of their family legacy.
         </div>
 
         <div class="btn-group">
@@ -372,8 +362,22 @@
 
     <main>
         
+        <section class="container content-guide">
+            <h2>The 3 Pillars of Generational Wealth Retention</h2>
+            <p><strong>Wealth transfer planning</strong> is no longer just about tax efficiency and trusts. In an era where <strong>heir attrition</strong> threatens to erode the client base of even the most established firms, emotional legacy planning has become the new standard for retention.</p>
+            
+            <h3>1. Establish Trust Before the Funeral</h3>
+            <p>Most advisors meet the heirs for the first time at a funeral—the worst possible moment to start a business relationship. VerbaPost provides a reason to engage the next generation <i>today</i>. When you deliver a physical "Legacy Letter" or audio biography, you aren't just a financial vendor; you are the guardian of their family history.</p>
+
+            <h3>2. Emotional Assets Outlast Financial Assets</h3>
+            <p>Studies show that <strong>generational wealth retention</strong> fails not because of poor investment returns, but because of a breakdown in family communication and trust. By facilitating the transfer of values (emotional assets), you solidify your role as the family's trusted counselor.</p>
+
+            <h3>3. Differentiation in a Commoditized Market</h3>
+            <p>Robo-advisors can rebalance portfolios, but they cannot interview a grandmother about her childhood. Offering <strong>legacy preservation services for advisors</strong> distinguishes your firm as a holistic wealth manager.</p>
+        </section>
+
         <section class="container">
-            <h2 class="process-label" style="text-align: center;">Who Needs VerbaPost?</h2>
+            <h2 class="process-label">Who Needs VerbaPost?</h2>
             <div class="use-cases-grid">
                 <div class="use-case-card">
                     <span class="use-case-title">High-Net-Worth Planning</span>
@@ -395,22 +399,61 @@
             
             <div class="process-grid">
                 <article class="process-step">
-                    <span class="step-icon">🎁</span>
+                    <span class="step-icon" role="img" aria-label="gift box">🎁</span>
                     <h3 class="step-title">1. You Gift</h3>
                     <div class="step-desc">Provide the "VerbaPost Archive" to your high-net-worth clients as part of their estate package.</div>
                 </article>
 
                 <article class="process-step">
-                    <span class="step-icon">📞</span>
+                    <span class="step-icon" role="img" aria-label="telephone">📞</span>
                     <h3 class="step-title">2. We Interview</h3>
                     <div class="step-desc">Our empathetic AI calls your client weekly to record stories. No apps or tech skills required for seniors.</div>
                 </article>
 
                 <article class="process-step">
-                    <span class="step-icon">📮</span>
+                    <span class="step-icon" role="img" aria-label="mailbox">📮</span>
                     <h3 class="step-title">3. Heirs Receive</h3>
                     <div class="step-desc">Beneficiaries receive physical letters containing the stories, creating a tangible emotional bond with your firm.</div>
                 </article>
+            </div>
+        </section>
+
+        <section class="container faq-section">
+            <h2 class="process-label">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <span class="faq-q">Is VerbaPost FINRA compliant?</span>
+                <span class="faq-a">Yes. We structure the "Client Legacy Package" as a one-time service fee of $99, ensuring it falls within the standard gift limits for most compliance departments.</span>
+            </div>
+            
+            <div class="faq-item">
+                <span class="faq-q">Do I need to interview the client myself?</span>
+                <span class="faq-a">No. VerbaPost is a "Done-For-You" service. We handle the scheduling, interviewing, transcription, and mailing. You simply receive the credit.</span>
+            </div>
+
+             <div class="faq-item">
+                <span class="faq-q">Can we white-label the service?</span>
+                <span class="faq-a">Yes. For enterprise partners, letters can be sent with your firm's letterhead and branding. Contact us for white-label details.</span>
+            </div>
+        </section>
+
+        <section class="blog-section">
+            <div class="container">
+                <h2 class="process-label">Latest Insights</h2>
+                <div class="process-grid">
+                    <a href="https://app.verbapost.com/?nav=blog" class="blog-link">
+                        <div class="blog-card">
+                            <span class="blog-title">The 90% Problem: Solving Heir Attrition</span>
+                            <span class="use-case-text">Why do heirs fire their parents' advisors, and how emotional wealth transfer stops the bleeding.</span>
+                        </div>
+                    </a>
+                    <a href="https://app.verbapost.com/?nav=blog" class="blog-link">
+                        <div class="blog-card">
+                            <span class="blog-title">Why Voice is the Medium of Memory</span>
+                            <span class="use-case-text">Handwriting is beautiful, but the human voice carries the soul. The science of audio biography.</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -459,13 +502,15 @@
             </div>
         </section>
 
-        </main>
+    </main>
 
-    <footer class="container footer">
-        <a href="https://app.verbapost.com/?nav=blog">Blog</a> • 
-        <a href="https://app.verbapost.com/?nav=legal">Terms & Privacy</a>
-        <br><br>
-        VerbaPost Inc. • Nashville, TN • Designed for Trust
+    <footer class="footer">
+        <div class="container">
+            <a href="https://app.verbapost.com/?nav=blog">Blog</a> • 
+            <a href="https://app.verbapost.com/?nav=legal">Terms & Privacy</a>
+            <br><br>
+            VerbaPost Inc. • Nashville, TN • Designed for Trust
+        </div>
     </footer>
 
 </body>
