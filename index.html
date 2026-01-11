@@ -57,13 +57,6 @@
             "priceCurrency": "USD",
             "description": "One-time legacy setup fee per client family."
           }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "VerbaPost Family Archive",
-          "description": "Direct-to-consumer voice biography service.",
-          "url": "https://verbapost.com/?nav=heirloom"
         }
     ]
     </script>
@@ -136,7 +129,7 @@
 
         /* BUTTONS */
         .btn-group {
-            display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;
+            display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;
         }
 
         .btn {
@@ -255,83 +248,81 @@
 
         <div class="btn-group">
             <a href="https://app.verbapost.com/?nav=partner" class="btn btn-primary">💼 Partner Portal Access</a>
-            <a href="https://app.verbapost.com/?nav=heirloom" class="btn btn-outline">Start a Family Archive (Personal)</a>
         </div>
         
-        <section class="process-section">
-            <h2 class="process-label">The Retention Mechanism</h2>
-            
-            <div class="process-grid">
-                <article class="process-step">
-                    <span class="step-icon">🎁</span>
-                    <h3 class="step-title">1. You Gift</h3>
-                    <div class="step-desc">Provide the "VerbaPost Archive" to your high-net-worth clients as part of their estate package.</div>
-                </article>
-
-                <article class="process-step">
-                    <span class="step-icon">📞</span>
-                    <h3 class="step-title">2. We Interview</h3>
-                    <div class="step-desc">Our empathetic AI calls your client weekly to record stories. No apps or tech skills required for seniors.</div>
-                </article>
-
-                <article class="process-step">
-                    <span class="step-icon">📮</span>
-                    <h3 class="step-title">3. Heirs Receive</h3>
-                    <div class="step-desc">Beneficiaries receive physical letters containing the stories, creating a tangible emotional bond with your firm.</div>
-                </article>
-            </div>
-        </section>
-
-        <section class="comparison-section">
-            <div class="container">
-                <h2 class="process-label">Why Wealth Managers Switch to VerbaPost</h2>
-                
-                <div class="table-scroll-wrapper">
-                    <table class="comp-table">
-                        <thead>
-                            <tr>
-                                <th style="width: 25%">Feature</th>
-                                <th class="vp-header" style="width: 25%">VerbaPost B2B</th>
-                                <th style="width: 25%">Standard Gifts</th>
-                                <th style="width: 25%">DIY Memoirs</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Client Goal</strong></td>
-                                <td class="vp-col">Heir Retention</td>
-                                <td>Short-term Gratitude</td>
-                                <td>One-off Project</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Senior Accessibility</strong></td>
-                                <td class="vp-col">Phone (Landline OK)</td>
-                                <td>N/A</td>
-                                <td>High Tech Barrier</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Deliverable</strong></td>
-                                <td class="vp-col">Weekly Physical Mail</td>
-                                <td>Wine / Golf / Pen</td>
-                                <td>PDF / Book (Delay)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Compliance</strong></td>
-                                <td class="vp-col">FINRA Compliant ($99)</td>
-                                <td>Varies</td>
-                                <td>N/A</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-        
-        <div style="margin-top: 60px; padding-top: 40px; border-top: 1px dashed #e2e8f0;">
-            <div style="color: #64748b; margin-bottom: 15px; font-size: 0.9rem;">Looking for the standard store?</div>
-            <a href="https://app.verbapost.com/?nav=store" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.9rem;">Go to Letter Store</a>
+        <div style="margin-top: 40px; padding-top: 30px; border-top: 1px dashed #e2e8f0; font-size: 0.85rem; color: #64748b;">
+            Existing Client or Beneficiary? <a href="https://app.verbapost.com/?nav=heirloom" style="color: #475569; text-decoration: underline;">Login to Family Archive</a>
         </div>
     </header>
+
+    <section class="container process-section">
+        <h2 class="process-label">The Retention Mechanism</h2>
+        
+        <div class="process-grid">
+            <article class="process-step">
+                <span class="step-icon">🎁</span>
+                <h3 class="step-title">1. You Gift</h3>
+                <div class="step-desc">Provide the "VerbaPost Archive" to your high-net-worth clients as part of their estate package.</div>
+            </article>
+
+            <article class="process-step">
+                <span class="step-icon">📞</span>
+                <h3 class="step-title">2. We Interview</h3>
+                <div class="step-desc">Our empathetic AI calls your client weekly to record stories. No apps or tech skills required for seniors.</div>
+            </article>
+
+            <article class="process-step">
+                <span class="step-icon">📮</span>
+                <h3 class="step-title">3. Heirs Receive</h3>
+                <div class="step-desc">Beneficiaries receive physical letters containing the stories, creating a tangible emotional bond with your firm.</div>
+            </article>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="process-label">Why Wealth Managers Switch to VerbaPost</h2>
+            
+            <div class="table-scroll-wrapper">
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Feature</th>
+                            <th class="vp-header" style="width: 25%">VerbaPost B2B</th>
+                            <th style="width: 25%">Standard Gifts</th>
+                            <th style="width: 25%">DIY Memoirs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Client Goal</strong></td>
+                            <td class="vp-col">Heir Retention</td>
+                            <td>Short-term Gratitude</td>
+                            <td>One-off Project</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Senior Accessibility</strong></td>
+                            <td class="vp-col">Phone (Landline OK)</td>
+                            <td>N/A</td>
+                            <td>High Tech Barrier</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Deliverable</strong></td>
+                            <td class="vp-col">Weekly Physical Mail</td>
+                            <td>Wine / Golf / Pen</td>
+                            <td>PDF / Book (Delay)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Compliance</strong></td>
+                            <td class="vp-col">FINRA Compliant ($99)</td>
+                            <td>Varies</td>
+                            <td>N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
     <footer class="container footer">
         <a href="https://app.verbapost.com/?nav=blog">Advisor Blog</a> • 
